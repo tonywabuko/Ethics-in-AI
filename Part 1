@@ -1,0 +1,17 @@
+Part 1: Theoretical Analysis (40%)
+
+Q1: Edge AI - Latency and Privacy
+
+Edge AI processes data directly on devices (e.g., smartphones, drones) rather than relying on cloud servers. This reduces latency, allowing for faster response times critical in applications like autonomous drones, where real-time obstacle avoidance is essential. Privacy is also enhanced as data remains on the device, reducing the risk of breaches.
+
+Q2: Quantum AI vs Classical AI
+
+Quantum AI uses quantum bits (qubits) and principles like superposition and entanglement to perform parallel computations, significantly accelerating optimization problems. Classical AI relies on binary logic and is often computationally intensive. Industries benefiting from Quantum AI include logistics (route optimization), pharmaceuticals (drug discovery), and finance (portfolio risk modeling).
+
+Q3: Human-AI Collaboration in Healthcare
+
+AI enhances healthcare by supporting roles like radiologists (automated image analysis) and nurses (vital monitoring and triage support). This collaboration improves diagnostic accuracy and efficiency, but requires ethical oversight to maintain trust and accountability.
+
+Case Study: AI-IoT for Traffic Management
+
+Integrating AI with IoT improves urban sustainability through real-time traffic analysis, reduced emissions, and predictive maintenance. Challenges include data security (privacy risks from sensor networks) and system interoperability (integration across diverse platforms).
