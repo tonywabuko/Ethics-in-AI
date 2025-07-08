@@ -1,0 +1,30 @@
+Task 2 and 3
+Task 2: AI-Driven IoT Concept - Smart Agriculture
+
+Sensors: Soil moisture, temperature, humidity, pH, light, rain gauge
+
+AI Model: Random Forest or LSTM for yield prediction
+
+Data Flow:
+
+Sensors -> Edge Gateway -> AI Processing -> Farmer Dashboard
+
+Benefit: Precision farming through automated, data-driven decisions
+
+Task 3: Ethics in Personalized Medicine
+
+Dataset: Cancer Genomic Atlas
+
+Issue: Bias due to underrepresentation of minorities
+
+Impact: Skewed AI treatment recommendations
+
+Fairness Strategies:
+
+Diverse and inclusive training data
+
+Bias audits
+
+Human-in-the-loop review
+
+Explainable AI models
