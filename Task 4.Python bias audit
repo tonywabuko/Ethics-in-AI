@@ -1,0 +1,76 @@
+# Install required packages
+!pip install aif360 scikit-learn pandas numpy matplotlib seaborn
+
+# Import libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler
+from aif360.datasets import CompasDataset
+from aif360.metrics import BinaryLabelDatasetMetric, ClassificationMetric
+from aif360.algorithms.preprocessing import Reweighing
+
+# Load COMPAS dataset
+dataset_orig = CompasDataset()
+
+# Define privileged and unprivileged groups
+privileged_groups = [{'race': 1}]     # Caucasian
+unprivileged_groups = [{'race': 0}]   # African-American
+
+# Bias metrics before classification
+metric_orig = BinaryLabelDatasetMetric(dataset_orig, 
+                                       unprivileged_groups=unprivileged_groups,
+                                       privileged_groups=privileged_groups)
+
+print("Mean difference:", metric_orig.mean_difference())
+
+# Standardize features and train logistic regression model
+X = StandardScaler().fit_transform(dataset_orig.features)
+y = dataset_orig.labels.ravel()
+model = LogisticRegression().fit(X, y)
+
+# Predict on original dataset
+dataset_pred = dataset_orig.copy()
+dataset_pred.labels = model.predict(X).reshape(-1, 1)
+
+# Classification metrics
+classified_metric = ClassificationMetric(dataset_orig, dataset_pred,
+                                         unprivileged_groups=unprivileged_groups,
+                                         privileged_groups=privileged_groups)
+
+print("Disparate Impact:", classified_metric.disparate_impact())
+print("False Positive Rate Difference:", classified_metric.false_positive_rate_difference())
+
+# Visualize False Positive Rates
+sns.barplot(data=pd.DataFrame({
+    "Group": ["Privileged", "Unprivileged"],
+    "FPR": [classified_metric.false_positive_rate(privileged=True),
+            classified_metric.false_positive_rate(privileged=False)]
+}), x="Group", y="FPR")
+plt.title("False Positive Rate by Race Group")
+plt.ylabel("False Positive Rate")
+plt.show()
+
+# Remediation via Reweighing
+RW = Reweighing(unprivileged_groups=unprivileged_groups,
+                privileged_groups=privileged_groups)
+dataset_transf = RW.fit_transform(dataset_orig)
+
+# Train model on reweighed data
+X_rw = StandardScaler().fit_transform(dataset_transf.features)
+y_rw = dataset_transf.labels.ravel()
+model_rw = LogisticRegression().fit(X_rw, y_rw)
+
+# Predict on reweighed data
+dataset_pred_rw = dataset_transf.copy()
+dataset_pred_rw.labels = model_rw.predict(X_rw).reshape(-1, 1)
+
+# Classification metrics after reweighing
+classified_metric_rw = ClassificationMetric(dataset_transf, dataset_pred_rw,
+                                            unprivileged_groups=unprivileged_groups,
+                                            privileged_groups=privileged_groups)
+
+print("Post-Reweighing Disparate Impact:", classified_metric_rw.disparate_impact())
+print("Post-Reweighing FPR Difference:", classified_metric_rw.false_positive_rate_difference())

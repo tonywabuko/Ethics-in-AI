@@ -1,0 +1,28 @@
+ 1. What is algorithm bias? (With 2 examples)  
+Algorithm bias occurs when an AI system produces unfair or discriminatory outcomes due to flawed assumptions, skewed training data, or unintended design choices. This can reinforce stereotypes or disadvantage certain groups.  
+
+Examples:  
+1. Hiring Algorithms: Amazon’s AI recruitment tool favored male candidates because it was trained on resumes submitted over 10 years (mostly from men), leading to gender bias.  
+2. Facial Recognition: Studies show systems like IBM’s and Microsoft’s had higher error rates for darker-skinned women compared to lighter-skinned men due to underrepresented training data.  
+
+ 2. Difference Between Transparency & Explainability  
+- Transparency: Focuses on openness about how an AI system is built, including data sources, model architecture, and potential limitations (e.g., publishing a model’s code).  
+- Explainability: Ensures users can understand an AI’s decision-making process in human terms (e.g., a loan denial AI providing reasons like "low credit score").  
+
+Key Contrast: Transparency is about revealing the system’s design, while explainability makes outputs interpretable to non-experts.  
+
+ 3. How Does GDPR Affect AI in Europe?  
+The General Data Protection Regulation (GDPR) imposes strict rules on AI systems handling EU citizens’ data:  
+- Right to Explanation: Users can demand clarity on automated decisions (e.g., credit scoring).  
+- Data Minimization: AI must use only necessary data (no excessive collection).  
+- Bias Mitigation: Requires fairness in algorithmic outcomes.  
+- Consent & Control: Explicit user consent is needed for personal data processing.  
+
+
+ 4. Match AI Principles to Definitions  
+
+ Principle   Definition                                                                 
+ Fairness  - Ensures AI systems do not create discriminatory or unjust impacts on groups.   
+ Autonomy  -  Respects human agency and allows individuals to override AI decisions.        
+ Privacy   - Protects user data from unauthorized access or misuse.                        
+ Accountability - Assigns responsibility for AI outcomes to developers/organizations.       

@@ -1,0 +1,46 @@
+Q1: Explain the Risks of Facial Recognition Misidentifying Minorities
+1. Privacy Violations
+Facial recognition systems collect, store, and analyze biometric data—often without consent. When used by governments, police, or corporations, this becomes a surveillance tool that can be abused to track, monitor, or control individuals, especially in marginalized communities.
+
+2. Wrongful Arrests and Legal Harm
+Studies (e.g., by MIT Media Lab) have shown that facial recognition systems—especially those trained on biased datasets—misidentify Black and Brown people at significantly higher rates. This has led to real cases of wrongful arrest and detention, damaging innocent lives.
+
+3. Amplifying Systemic Discrimination
+When flawed recognition systems are deployed in law enforcement, border control, or job screening, they amplify pre-existing systemic biases. The result: more surveillance and policing of communities already facing discrimination.
+
+4. Loss of Trust in Technology
+If these systems continue to fail certain groups, they erode public trust in AI and undermine efforts to use tech for good. It becomes seen as a weapon, not a tool.
+
+Q2: Suggest Rules or Policies for Using Facial Recognition Responsibly
+1. Mandate Transparency & Explainability
+Agencies must disclose when and where facial recognition is used.
+
+Citizens should have access to clear explanations of how the system works and decisions made by it.
+
+2. Independent Audits & Fairness Tests
+Require regular bias audits by third parties.
+
+Publish false positive/negative rates by race and gender.
+
+Ensure systems meet minimum accuracy thresholds before deployment.
+
+3. Strict Regulation or Ban in Law Enforcement
+Suspend facial recognition in policing until it can prove fair and accurate performance.
+
+In high-risk applications (e.g., criminal justice), consider a total moratorium.
+
+ 4. Informed Consent & Opt-Out Options
+Individuals should be informed when facial recognition is used on them.
+
+Provide an opt-out wherever possible, especially in public spaces and private services.
+
+5. Diverse & Inclusive Training Data
+Require datasets to be representative of all races, genders, and ages.
+
+Document dataset sources to ensure transparency and avoid hidden bias.
+
+6. Accountability & Legal Recourse
+If someone is harmed by a misidentification, there should be clear legal pathways to seek justice.
+
+Developers and deployers should face legal accountability for damages caused by faulty systems.
+

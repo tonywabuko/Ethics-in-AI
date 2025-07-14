@@ -1,0 +1,16 @@
+***Bias Audit on COMPAS Recidivism Dataset Using AI Fairness 360***
+
+We audited the COMPAS dataset to assess racial bias in risk scores using IBM’s AI Fairness 360 toolkit. The dataset labels individuals as either likely or unlikely to recidivate. Racial attributes—specifically African-American vs. Caucasian—were treated as sensitive.
+
+The `mean difference` score indicated that unprivileged groups received consistently higher risk labels. The `false positive rate (FPR)` was notably higher for African-Americans, suggesting they were more often incorrectly labeled as high-risk despite not reoffending. Our visualization underscored this disparity, showing clear FPR imbalance.
+
+Using logistic regression without mitigation, we measured a disparate impact ratio significantly below 1, confirming bias. To remediate this, we tested the Reweighing algorithm from AI Fairness 360, which rebalances the data distribution across sensitive groups.
+
+Post-reweighing, the FPR gap reduced substantially, and disparate impact improved, indicating a fairer classifier output. However, fairness interventions may trade off predictive accuracy, so model selection must balance ethical and practical goals.
+
+We recommend:
+- Incorporating fairness preprocessing (e.g., reweighing or optimized preprocessing).
+- Including fairness metrics in deployment monitoring pipelines.
+- Transparent communication to stakeholders about risk model limitations.
+
+This audit confirms that bias exists in the COMPAS dataset, reinforcing the need for fairness-aware machine learning in sensitive domains.

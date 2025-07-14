@@ -1,65 +1,69 @@
-# Ethics-in-AI
-week 7
+# AI-Ethics-Assignment-Week-7
+# 🤖 Week 7 Assignment – AI Ethics: Designing Responsible and Fair AI Systems
 
-# 🧠 AI Assignment Portfolio (2025)
+## 📘 Overview
 
-This repository documents a comprehensive portfolio of artificial intelligence (AI) concepts and applications for academic and practical evaluation. It includes theoretical analysis, hands-on implementation, ethical reflection, a futuristic concept paper, and an introduction to quantum computing in AI.
+This repository contains our group submission for the Week 7 assignment on **AI Ethics**, focused on the theme:  
+**"Designing Responsible and Fair AI Systems"** 🌍⚖️
 
----
-
-## 📘 Part 1: Theoretical Analysis (40%)
-
-### ✅ Essay Questions
-- **Edge AI:** Reduces latency and enhances data privacy by processing on-device (e.g., in autonomous drones).
-- **Quantum vs Classical AI:** Quantum AI accelerates optimization using qubits, benefiting industries like logistics and drug discovery.
-- **Human-AI Collaboration in Healthcare:** AI enhances decision-making for radiologists and nurses, increasing accuracy and efficiency.
-
-### 🏙️ Case Study – AI-IoT in Smart Cities
-- **Impact:** Improves urban sustainability through real-time traffic optimization and reduced emissions.
-- **Challenges:** Data security, interoperability across diverse urban systems.
+Our objective was to explore algorithmic fairness, ethical AI design, bias detection, and real-world implications through both theoretical and practical work. The project includes five tasks covering case studies, audits, reflections, and ethical principles.
 
 ---
 
-## ⚙️ Part 2: Practical Implementation (50%)
+## 👥 Group Members
 
-### 🧪 Task 1: Edge AI Prototype
-- Trained image classifier for recyclable items using TensorFlow Lite.
-- Demonstrated lightweight model conversion for real-time, on-device use.
-- Output: `recycle_model.tflite` + accuracy report.
-
-### 🌾 Task 2: AI-Driven IoT in Smart Agriculture
-- **Sensors:** Soil moisture, temperature, humidity, light, pH, rainfall.
-- **AI Model:** Random Forest or LSTM.
-- **Output:** Concept proposal + data flow diagram for precision farming.
-
-### ⚖️ Task 3: Ethics in Personalized Medicine
-- **Dataset:** Cancer Genomic Atlas.
-- **Issues:** Underrepresentation of minority groups, lack of transparency.
-- **Solutions:** Diverse data, fairness audits, explainable models, human oversight.
+1. Amahle Mathebula  
+2. Victor Muthomi  
+3. Achieng Verra  
+4. Brian Sangura  
+5. Geofrey Killeta
 
 ---
 
-## 🔮 Part 3: Futuristic Proposal (10%)
+## 📂 Repository Structure
 
-### 🌍 AI-Guided Atmospheric Carbon Removal (AGACR)
-- Uses reinforcement learning and satellite data to guide drone-based CO₂ removal.
-- Balances climate action with ethical governance to prevent misuse and ecological harm.
-- Deliverable: 1-page concept paper.
+| File/Folder | Description |
+|-------------|-------------|
+| `README.md` | This file – an overview of the project, members, and structure |
+| `Task 1/` | Theoretical Questions & Ethical Principles Matching (Part 1) |
+| `Task 2: Case Study – Amazon’s Biased Hiring Tool/` | Analysis of a biased AI recruiting tool (Part 2 – Case 1) |
+| `Task 3/` | Case Study on Facial Recognition in Policing (Part 2 – Case 2) |
+| `Task 4.Python bias audit/` | Jupyter Notebook audit of the COMPAS dataset using AI Fairness 360 (Part 3) |
+| `Task 4-Report on Bias audit/` | 300-word written report summarizing audit findings |
+| `Task 5 week 7/` | Ethical Reflection + Bonus Task: Policy Proposal for AI in Healthcare (Part 4 & Bonus) |
 
 ---
 
-## 🧠 Bonus Task: Quantum Computing Simulation (Extra 10%)
+## 🧪 Tools & Libraries Used
 
-### 💻 Quantum Circuit with IBM Qiskit
-- Implemented basic entanglement simulation in Qiskit.
-- Use Case: AI-accelerated drug discovery through faster molecule simulation.
+- **Python**
+- **Jupyter Notebook / Google Colab**
+- **AI Fairness 360 Toolkit (by IBM)**
+- **Pandas, Matplotlib, Seaborn** – for data analysis and visualizations
 
-```python
-from qiskit import QuantumCircuit, Aer, execute
-qc = QuantumCircuit(2)
-qc.h(0)
-qc.cx(0, 1)
-qc.measure_all()
-simulator = Aer.get_backend('qasm_simulator')
-result = execute(qc, simulator, shots=1024).result()
-print(result.get_counts())
+---
+
+## 📌 Deliverables Summary
+
+- 📄 **PDF Report** (Tasks 1–3, 5): Covers theoretical answers, case study analysis, and ethical reflections  
+- 🧾 **Jupyter Notebook** (Task 4): COMPAS dataset bias audit using AIF360  
+- 📊 **Bias Audit Report**: 300-word explanation of findings and remediation strategies  
+- 📝 **Bonus Task** (Optional): 1-page ethical AI policy for healthcare  
+
+---
+
+## 📅 Deadline
+
+> Submitted as part of Week 7 – Practical Learning Program (PLP) AI Ethics Module  
+> **Theme:** Designing Responsible and Fair AI Systems  
+> **Submission Format:** PDF + GitHub repo with code and audit visuals
+
+---
+
+## 🌟 Acknowledgements
+
+Special thanks to our facilitator and the PLP Academy team for the guidance and resources provided for this project.  
+We also used the [AI Fairness 360 Toolkit](https://aif360.mybluemix.net/) by IBM to support our bias audit.
+
+---
+

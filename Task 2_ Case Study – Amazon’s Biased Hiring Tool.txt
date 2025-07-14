@@ -1,0 +1,30 @@
+Task 2: Case Study – Amazon’s Biased Hiring Tool
+ Background
+Amazon developed an AI-powered recruitment tool intended to streamline the hiring process. However, the system began to unfairly penalize resumes from female candidates. Resumes that included words like “women’s chess club” or referenced women’s colleges were ranked lower. This issue stemmed from the AI learning patterns from historical hiring data, which reflected a male-dominated workforce.
+
+Source of Bias
+The main source of bias was the training data. The AI was trained on 10 years of past resumes, during which Amazon hired mostly male candidates. As a result, the model associated male-dominated language and experiences with successful hiring outcomes, while disadvantaging female-associated content. The problem was worsened by a lack of fairness checks or ethical auditing during the model's development and testing stages.
+
+ Proposed Solutions
+To ensure fairness in future AI recruiting tools, the following three steps are recommended:
+
+Use Balanced Training Data
+Collect and use a gender-balanced dataset, ensuring fair representation of qualified candidates across different genders.
+
+Remove Gender-Linked Features
+Eliminate terms or attributes that directly or indirectly indicate gender (e.g., pronouns, “women’s,” “men’s”) unless they are necessary for assessing qualifications.
+
+Conduct Regular Fairness Audits
+Integrate fairness checks during model development using tools such as IBM’s AI Fairness 360 toolkit, which helps identify and mitigate bias in datasets and models (Bellamy et al., 2018).
+
+ Fairness Metrics for Evaluation
+After implementing corrections, the fairness of the model can be evaluated using these metrics:
+
+Disparate Impact Ratio – Checks if selection rates differ significantly between genders. A value between 0.8 and 1.25 is generally considered fair.
+
+Equal Opportunity Difference – Measures whether equally qualified candidates across genders have the same chances of being selected.
+
+False Positive/Negative Rate Differences – Tracks whether one gender is being unfairly rejected or favored more than the other.
+
+Reference:
+Bellamy, R. K. E., Dey, K., Hind, M., Hoffman, S. C., Houde, S., Kannan, K., ... & Zhang, Y. (2018). AI Fairness 360: An extensible toolkit for detecting, understanding, and mitigating unwanted algorithmic bias. arXiv preprint arXiv:1810.01943.
