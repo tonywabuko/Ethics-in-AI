@@ -12,11 +12,11 @@ Our objective was to explore algorithmic fairness, ethical AI design, bias detec
 
 ## 👥 Group Members
 
-1. Amahle Mathebula  
-2. Victor Muthomi  
-3. Achieng Verra  
+1. Tony Wabuko
+2. Jacob Kiniga
+3. John Kuria 
 4. Brian Sangura  
-5. Geofrey Killeta
+5. Neema Monanti
 
 ---
 
